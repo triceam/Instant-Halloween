@@ -23,9 +23,24 @@ Instant Halloween is a free and open source Halloween-themed sound effects appli
 
 This application is rendered dynamically using JavaScript.  See www/index.html to see general structure and HTML template.  See www/js/index.js for general application logic and interactivity.
 
+###Libraries
+The following libraries were used within this application:
+
+* [Zepto](http://zeptojs.com/)
+* [iScroll](http://cubiq.org/iscroll)
+* [MustacheJS](https://github.com/janl/mustache.js)
+
+## Attribution
+
+###Font
+The font used within this application is ["Creepsville"](http://www.fontfreak.com/font_Creepsville.htm), available for free.  An embedded font was chosen so that this font will still work in offline scenarios. The TTF font was converted for in-browser use with [Font Squirrel Generator](http://www.fontsquirrel.com/fontface/generator).
+
+###Skull Icon
+The "Skull" icon used by this application by [Tim Piper, from The Noun Project](http://thenounproject.com/noun/skull/#icon-No4522)
+
 ##Sounds
 
-The audio assets are not redistributed in this directory due to copyright law.  However, all of these assets are available under Creative Commons licenses from [freesound.org](http://www.freesound.org).  Be sure to review the individual licenses for each file before any attempt to use them in any commercial or non-commercial work.  You can access specific download links in the [readme](www/assets/processed/README.md).
+The audio assets are not redistributed in this directory due to copyright law.  However, all of these assets are available under Creative Commons licenses from [freesound.org](http://www.freesound.org).  Be sure to review the individual licenses for each file before any attempt to use them in any commercial or non-commercial work.  You can access specific download links in the [readme](https://github.com/triceam/Instant-Halloween/blob/master/www/assets/processed/README.md).
 
 All sound files were converted to 16bit 22050 Hz MP3 files.  You can use a higher quality/bitrate if you want.  I chose the lower quality due to memory issues on older/low-end Android devices.
 
