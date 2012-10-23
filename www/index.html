@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=no; width=device-width" />
+
+
+        <meta charset="utf-8">
+
+
+        <link rel="stylesheet" href="assets/creepsville/stylesheet.css" type="text/css" charset="utf-8">
+        <link rel="stylesheet" href="assets/styles.css" type="text/css" charset="utf-8">
+    </head>
+
+
+    <body style="background-color:#000;">
+
+        <header>
+            <div id="content">Instant Halloween</div>
+            <div id="border"></div>
+        </header>
+        <div id="wrapper" style="overflow: hidden; ">
+            <div id="body">
+                 <div id="loading">LOADING...</div>
+            </div>
+        </div>
+
+    </body>
+
+
+    <script type="text/javascript" src="js/iscroll.js"></script>
+    <script type="text/javascript" src="js/mustache.js"></script>
+    <script type="text/javascript" src="js/zepto.js"></script>
+    <script type="text/javascript" src="cordova-2.1.0.js"></script>
+    <script type="text/javascript" charset="utf-8" src="LowLatencyAudio.js"></script>
+    <script type="text/javascript" src="js/NativeUtil.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+    <script id="mainViewTemplate">
+        <h2>Ambient Loops</h2>
+
+        <div class="row">
+            <div id="ambientSounds">
+            {{#ambient}}
+                <div id="{{id}}" class="ambientLi cell {{#playing}}active{{/playing}}">
+                    {{label}}
+                </div>
+            {{/ambient}}
+            </div>
+        </div>
+
+        <h2>Effects</h2>
+        <div class="row">
+            <div id="soundEffects" class="multicolumn">
+            {{#effects}}
+                <div id="{{id}}" class="effectLi cell {{#playing}}active{{/playing}}">
+                    {{label}}
+                    <button class="stop" id="stop_{{id}}"></button>
+                </div>
+            {{/effects}}
+            </div>
+        </div>
+
+        <footer>
+            <button id="aboutButton">About "Instant Halloween"</button>
+        </footer>
+    </script>
+
+    <script id="aboutViewTemplate">
+        <div id="about">
+            <button id="back">Back</button>
+            <p>"Instant Halloween" is a fun holiday application to help you scare the pants off of your friends!  Use it to create a creepy ambiance, or play scary Halloween sound effects to liven up any situation.</p>
+
+            <p>Instant Halloween is a free and open source application built using <a href="http://www.phonegap.com" target="_blank">PhoneGap</a>.  You can read more about this application and how it was built at: <a href="http://www.tricedesigns.com/halloween/" target="_blank">http://www.tricedesigns.com/halloween/</a></p>
+
+            <h2>Attribution:</h2>
+
+            <h4>Sounds</h4>
+            <p>All sounds used within this application are available as creative-commons assets from <a href="http://www.freesound.org">http://www.freesound.org</a>.  See specific assets with links to the original source below:</p>
+
+            <ul class="normalList">
+                <li><a href="http://www.freesound.org/people/klankbeeld/sounds/126323/" target="_blank">Tension</a></li>
+                <li><a href="http://www.freesound.org/people/Argitoth/sounds/38964/" target="_blank">Hellscape</a></li>
+                <li><a href="http://www.freesound.org/people/Erdie/sounds/23222/" target="_blank">Thunder</a></li>
+                <li><a href="http://www.freesound.org/people/BugInTheSYS/sounds/108247/" target="_blank">Heartbeat</a></li>
+                <li><a href="http://www.freesound.org/people/mystiscool/sounds/7176/" target="_blank">Rain</a></li>
+                <li><a href="http://www.freesound.org/people/Setuniman/sounds/149300/" target="_blank">Haunted Piano</a></li>
+                <li><a href="http://www.freesound.org/people/gregswinford/sounds/70100/" target="_blank">Haunted Forest</a></li>
+
+                <li><a href="http://www.freesound.org/people/Leady/sounds/26729/" target="_blank">Evil Laughter</a></li>
+                <li><a href="http://www.freesound.org/people/str4ngS/sounds/76455/" target="_blank">Demonic Laughter</a></li>
+                <li><a href="http://www.freesound.org/people/Robinhood76/sounds/84746/" target="_blank">Witch Cackle</a></li>
+
+
+                <li><a href="http://www.freesound.org/people/Sea%20Fury/sounds/48662/" target="_blank">Monster Roar</a></li>
+                <li><a href="http://www.freesound.org/people/Sea%20Fury/sounds/48688/" target="_blank">Demon's Breath</a></li>
+                <li><a href="http://www.freesound.org/people/Robinhood76/sounds/66494/" target="_blank">Zombie Belch</a></li>
+
+                <li><a href="http://www.freesound.org/people/Robinhood76/sounds/97311/" target="_blank">Ghost Moan</a></li>
+                <li><a href="http://www.freesound.org/people/Robinhood76/sounds/66642/" target="_blank">Poltergeist</a></li>
+                <li><a href="http://www.freesound.org/people/Flasher21/sounds/103332/" target="_blank">Death Squeal</a></li>
+
+                <li><a href="http://www.freesound.org/people/inchadney/sounds/52450/" target="_blank">Crow's Caw</a></li>
+                <li><a href="http://www.freesound.org/people/Johnc/sounds/20684/" target="_blank">Owl Hoot</a></li>
+
+                <li><a href="http://www.freesound.org/people/Robinhood76/sounds/66398/" target="_blank">Wolf Howl</a></li>
+                <li><a href="http://www.freesound.org/people/Gorgoroth6669/sounds/76456/" target="_blank">Wolves Prowling</a></li>
+
+                <li><a href="http://www.freesound.org/people/thanvannispen/sounds/9432/" target="_blank">Male Scream</a></li>
+                <li><a href="http://www.freesound.org/people/analogchill/sounds/35716/" target="_blank">Female Scream</a></li>
+                <li><a href="http://www.freesound.org/people/thanvannispen/sounds/30279/" target="_blank">Group Scream</a></li>
+            </ul>
+
+            <h4>Font</h4>
+            <p>The font used within this application is "Creepsville", available for free at:
+            <a href="http://www.fontfreak.com/font_Creepsville.htm?customt=&psize=50<">http://www.fontfreak.com/font_Creepsville.htm?customt=&psize=50</a>.
+            The TTF font was converted for in-browser use with <a href="http://www.fontsquirrel.com/fontface/generator">Font Squirrel Generator</a>.</p>
+
+            <h4>Skull Icon</h4>
+            <p>The "Skull" icon used by this application by <a href="http://thenounproject.com/noun/skull/#icon-No4522">Tim Piper, from The Noun Project</a></p>
+        </div>
+        <footer></footer>
+    </script>
+</html>

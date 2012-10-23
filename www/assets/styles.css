@@ -1,0 +1,242 @@
+* {
+    -webkit-overflow-scrolling: none;
+}
+
+body {
+    font-family: 'creepsvilleregular';
+    background-color:#000;
+    font-size: 2em;
+}
+
+
+body, html {
+    margin:0px;
+    height: 100%;
+    oveflow: hidden;
+}
+
+#wrapper {
+    margin:0px;
+    position: absolute;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom: 0px;;
+    padding: 44px 15px 15px 15px;
+    background-color: #111;
+}
+
+#body {
+    width:100%;
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+}
+
+header {
+    margin: 0;
+    z-index: 1;
+    position: fixed;
+    display: block;
+    width: 100%;
+    top: 0;
+}
+
+header #content {
+    height: 44px;
+    font-size: 1.5em;
+    background-color: #222;
+    background: url("images/header_background.jpg") top left;
+    padding: .5em 0px .15em 0px;
+    width: 100%;
+    color: #FF7F00;
+    font-weight: bold;
+    border-bottom: 1px solid #000;
+    text-align: center;
+    font-size: 1em;
+    text-shadow: 0.1em 0.1em 0.05em #000;
+}
+
+header #border {
+    background: url("images/blood_border.png") top left repeat-x;
+    height: 19px;
+    width:100%;
+    margin:0px;
+    padding:0px;
+    margin-top:-1px;
+}
+
+footer {
+    margin-top: 1em;
+    border-top; 1px solid #888;
+    font-family: arial;
+    font-size: 0.5em;
+    text-align: center;
+    padding-bottom:6em;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    color: #FF7F00;
+    margin-bottom: 0px;
+    /*text-shadow: 0.1em 0.1em 0.05em #000;*/
+}
+
+a {
+    color: black;
+}
+a:hover {
+    color: white;
+}
+
+.stop {
+    display: none;
+    position: absolute;
+    top:10px;
+    right:10px;
+    bottom:10px;
+    width:1.5em;
+    min-width:50px;
+    border: 1px solid black;
+    background: #FF7F00 url("images/stop.jpg") no-repeat center;
+}
+
+.active .stop {
+    display: block;
+}
+
+.multicolumn {
+}
+
+
+#ambientSounds,
+#soundEffects{
+    padding:0;
+    margin:0;
+    margin-left:-17px;
+    border:none;
+    list-style-type: none;
+
+
+
+}
+
+#ambientSounds div,
+#soundEffects div,
+li {
+    padding:.6em 0px .4em 0px;
+    position: relative;
+    font-size: 1em;
+    border:1px solid #666;
+	text-indent:51px;
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+
+    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+}
+
+div.effectLi  {
+    background-image: url("images/play.png");
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    background-color: #eee;
+}
+
+div.ambientLi {
+    background-image: url("images/play.png");
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    background-color: #eee;
+}
+
+.ambientLi.active {
+    background-image: url("images/stop.jpg");
+}
+
+div.effectLi.active,
+div.ambientLi.active {
+    background-color: #FF7F00;
+}
+
+#loading {
+    margin-top:3em;
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    color: #FF7F00;
+    text-shadow: 0.1em 0.1em 0.05em #000;
+}
+
+/*
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+
+    #wrapper {
+        padding: 50px 25px 25px 25px;
+    }
+}*/
+
+.row {
+	display:table;
+	width:100%;
+	content:"";
+	clear:both;
+}
+
+.cell {
+	float:left;
+	margin-left:20px;
+}
+
+
+#aboutButton {
+    margin: 1em;
+    padding: 1em 2em;
+    border: 1px solid #666;
+    background: #444;
+    color:#FF7F00;
+    font-family: arial;
+    font-size: 1.25em;
+}
+
+#back {
+    margin: 0px;
+    padding: 1em 2em;
+    border: 1px solid #666;
+    color: #000;
+    background:#FF7F00;
+    font-family: arial;
+    font-size: 1.25em;
+    margin-right:20px;
+    margin-bottom: 20px;
+}
+
+#about {
+    margin-top:44px;
+    font-family: arial;
+    color: white;
+    font-size: 0.5em;
+}
+
+#about a{
+    color: #FF7F00;
+}
+
+#about li{
+    border: none;
+    padding:0px .5em;
+}
+
+.normalList {
+    list-style: circle;
+}
+
+.normalList li {
+	text-indent:0px;
+}
