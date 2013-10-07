@@ -10,65 +10,78 @@
 
         <link rel="stylesheet" href="assets/creepsville/stylesheet.css" type="text/css" charset="utf-8">
         <link rel="stylesheet" href="assets/styles.css" type="text/css" charset="utf-8">
+        <link rel="stylesheet" href="js/app-ui/viewnavigator/viewnavigator.css" type="text/css" charset="utf-8">
     </head>
 
 
     <body style="background-color:#000;">
 
-        <header>
-            <div id="content">Instant Halloween</div>
-            <div id="border"></div>
-        </header>
-        <div id="wrapper" style="overflow: hidden; ">
-            <div id="body">
-                 <div id="loading">LOADING...</div>
-            </div>
-        </div>
+      <div id="loading">
+          LOADING...
+      </div>
+
+
+
+
 
     </body>
 
 
-    <script type="text/javascript" src="js/iscroll.js"></script>
+    <script type="text/javascript" src="js/app-ui/viewnavigator/viewnavigator.js"></script>
     <script type="text/javascript" src="js/mustache.js"></script>
-    <script type="text/javascript" src="js/zepto.js"></script>
-    <script type="text/javascript" src="cordova-2.1.0.js"></script>
-    <script type="text/javascript" charset="utf-8" src="LowLatencyAudio.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.animate-enhanced.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/NativeUtil.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
 
     <script id="mainViewTemplate">
-        <h2>Ambient Loops</h2>
+
+        <div style="height:50px">&nbsp;</div>
 
         <div class="row">
             <div id="ambientSounds">
             {{#ambient}}
                 <div id="{{id}}" class="ambientLi cell {{#playing}}active{{/playing}}">
-                    {{label}}
+                    &nbsp;
+                    <svg width="20px" height="20px" id="playIcon"><g>
+                        <polygon points="0.5,0.5 19.5,10.5 0.5,19.5 0.5,0.5" />
+                    </g></svg>
+                    <svg width="20px" height="20px" id="stopIcon"><g>
+                        <polygon points="0.5,0.5 19.5,0.5 19.5,0.5 19.5,19.5 0.5 19.5 0.5,0.5" />
+                    </g></svg>
+                    {{label}}  <span class="right">∞</span>
                 </div>
             {{/ambient}}
             </div>
         </div>
 
-        <h2>Effects</h2>
+        <div class="headingSection">Effects</div>
         <div class="row">
             <div id="soundEffects" class="multicolumn">
             {{#effects}}
                 <div id="{{id}}" class="effectLi cell {{#playing}}active{{/playing}}">
+                    &nbsp;
+                    <svg width="20px" height="20px"><g>
+                        <polygon points="0.5,0.5 19.5,10.5 0.5,19.5 0.5,0.5" />
+                    </g></svg>
                     {{label}}
-                    <button class="stop" id="stop_{{id}}"></button>
+
+                    <span class="stop" id="stop_{{id}}">
+                        <img src="assets/images/stop.svg" id="stop_{{id}}" />
+                    </span>
                 </div>
             {{/effects}}
             </div>
         </div>
 
-        <footer>
-            <button id="aboutButton">About "Instant Halloween"</button>
-        </footer>
     </script>
 
     <script id="aboutViewTemplate">
+
+        <br/>
+        <br/>
         <div id="about">
-            <button id="back">Back</button>
             <p>"Instant Halloween" is a fun holiday application to help you scare the pants off of your friends!  Use it to create a creepy ambiance, or play scary Halloween sound effects to liven up any situation.</p>
 
             <p>Instant Halloween is a free and open source application built using <a href="http://www.phonegap.com" target="_blank">PhoneGap</a>.  You can read more about this application and how it was built at: <a href="http://www.tricedesigns.com/halloween/" target="_blank">http://www.tricedesigns.com/halloween/</a></p>
@@ -78,7 +91,8 @@
             <h4>Sounds</h4>
             <p>All sounds used within this application are available as creative-commons assets from <a href="http://www.freesound.org">http://www.freesound.org</a>.  See specific assets with links to the original source below:</p>
 
-            <ul class="normalList">
+            <ul class="normalList multicolumnList">
+
                 <li><a href="http://www.freesound.org/people/klankbeeld/sounds/126323/" target="_blank">Tension</a></li>
                 <li><a href="http://www.freesound.org/people/Argitoth/sounds/38964/" target="_blank">Hellscape</a></li>
                 <li><a href="http://www.freesound.org/people/Erdie/sounds/23222/" target="_blank">Thunder</a></li>
@@ -109,6 +123,23 @@
                 <li><a href="http://www.freesound.org/people/thanvannispen/sounds/9432/" target="_blank">Male Scream</a></li>
                 <li><a href="http://www.freesound.org/people/analogchill/sounds/35716/" target="_blank">Female Scream</a></li>
                 <li><a href="http://www.freesound.org/people/thanvannispen/sounds/30279/" target="_blank">Group Scream</a></li>
+
+
+                <li><a href="http://www.freesound.org/people/klankbeeld/sounds/125919/" target="_blank"> What Are You doing Here</a></li>
+                <li><a href="http://www.freesound.org/people/klankbeeld/sounds/169975/" target="_blank">Ghost</a></li>
+                <li><a href="http://www.freesound.org/people/Erdie/sounds/165615/" target="_blank">Zombie Hoard</a></li>
+                <li><a href="http://www.freesound.org/people/2887679652/sounds/165926/" target="_blank">Demon Laughter</a></li>
+                <li><a href="http://www.freesound.org/people/zagi2/sounds/184474/" target="_blank">Horror Lulaby</a></li>
+                <li><a href="http://www.freesound.org/people/Striderjapan/sounds/141368/" target="_blank">Vampire Chant</a></li>
+                <li><a href="http://www.freesound.org/people/genelythgow/sounds/147076/" target="_blank">Demon Speech</a></li>
+                <li><a href="http://www.freesound.org/people/cinemafia/sounds/24841/" target="_blank">Minion</a></li>
+                <li><a href="http://www.freesound.org/people/AlucardsBride/sounds/179659/" target="_blank">Come Out And Play With Me</a></li>
+                <li><a href="http://www.freesound.org/people/Aeonemi/sounds/180330/" target="_blank">Church Bell</a></li>
+                <li><a href="http://www.freesound.org/people/LG/sounds/72651/" target="_blank">Music Box</a></li>
+                <li><a href="http://www.freesound.org/people/MisterTood/sounds/9320/" target="_blank">Dark Circus</a></li>
+                <li><a href="http://www.freesound.org/people/steven169/sounds/64407/" target="_blank">Dark Whispers</a></li>
+                <li><a href="http://www.freesound.org/people/angeljs/sounds/163289/" target="_blank">I will kill you</a></li>
+
             </ul>
 
             <h4>Font</h4>

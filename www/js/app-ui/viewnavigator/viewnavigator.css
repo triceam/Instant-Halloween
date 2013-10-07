@@ -1,0 +1,176 @@
+/*
+THIS SOFTWARE IS PROVIDED BY ANDREW M. TRICE ''AS IS'' AND ANY EXPRESS OR IMPLIED
+WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL ANDREW M. TRICE OR
+CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+.viewNavigator_root {
+    position:absolute;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+	background-color:#222;
+	overflow:hidden;
+}
+
+.viewNavigator_header {
+	position:absolute;
+	width:100%;
+	height:50px;
+	overflow:hidden;
+	padding:0px;
+
+    background: rgba(20,20,20,0.95);
+    border-bottom: 1px solid #825000;
+    color: #FF7F00;
+}
+
+.viewNavigator_header_backlink {
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:2;
+	
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    
+    max-width:30%;
+}
+
+.viewNavigator_header_title {
+
+	position:absolute;
+	top:12px;
+	left:0%;
+	right:0%;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    
+    max-width:68%;
+    font-size: 2em;
+}
+
+.viewNavigator_headerContent {
+/*
+    backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	
+	transform: translate3d(0,0,0);
+	-webkit-transform: translate3d(0,0,0);*/
+
+	position:absolute;
+    max-height: 50px;
+}
+
+.viewNavigator_headerActions {
+    position: absolute;
+    top:0px;
+    right:0px;
+    padding-top: 8px;
+    padding-right: 0px;
+}
+
+.viewNavigator_content {
+	position:absolute;
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+
+/*
+    backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+    -webkit-transform:translate3d(0,0,0);
+    */
+    padding:0px;
+    margin:0px;
+
+    overflow:hidden;
+    border-top: 1px solid #111;
+}
+
+
+/* ANDROID BUG WORKAROUND
+.viewNavigator_content select {
+	overflow:auto;
+	position:relative;
+    backface-visibility: auto;
+	-webkit-backface-visibility: auto;
+}      */
+
+/*
+.viewNavigator_content div {
+
+    backface-visibility: visible;
+    -webkit-backface-visibility: visible;
+    -webkit-transform: translate3d(0,0,0);
+}*/
+
+.viewNavigator_contentHolder {
+
+	padding:0px;
+	margin:0px;
+	min-width:100%;
+	min-height:100%;
+
+    position:absolute;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+
+    overflow-x:hidden;
+    overflow-y:scroll;
+    -webkit-overflow-scrolling: touch;
+    background-color:#111;
+}
+
+/*
+.viewNavigator_contentHolder>div {
+
+    min-height:100%;
+    padding:0px;
+    margin:0px;
+}   */
+
+.viewNavigator_backface {
+/*    backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+*/
+}
+
+.viewNavigator_backButtonPosition {
+	position:absolute;
+	left: 5px;
+	top: 0em;
+}
+
+.viewNavigator_backButton
+{
+	cursor:pointer;
+	display: inline-block;
+	white-space: nowrap;
+    background: none;
+    border:none;
+	border-radius: .2em;
+	padding: 0px;
+}
+
+.viewNavigator_backButton:active
+{
+	background-color: #666;
+}

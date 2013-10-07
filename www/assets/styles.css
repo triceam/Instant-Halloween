@@ -1,11 +1,23 @@
-* {
-    -webkit-overflow-scrolling: none;
-}
+
 
 body {
+    /*
+    font-family: 'creepsvilleregular'; */
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    background-color:#555;
+    color: #FF7F00;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.viewNavigator_header_title {
     font-family: 'creepsvilleregular';
-    background-color:#000;
-    font-size: 2em;
+    font-size: 1.5em;
+
 }
 
 
@@ -15,74 +27,16 @@ body, html {
     oveflow: hidden;
 }
 
-#wrapper {
-    margin:0px;
-    position: absolute;
-    top:0px;
-    left:0px;
-    right:0px;
-    bottom: 0px;;
-    padding: 44px 15px 15px 15px;
-    background-color: #111;
-}
 
 #body {
     width:100%;
 
+/*
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
 
     transform: translate3d(0,0,0);
-    -webkit-transform: translate3d(0,0,0);
-}
-
-header {
-    margin: 0;
-    z-index: 1;
-    position: fixed;
-    display: block;
-    width: 100%;
-    top: 0;
-}
-
-header #content {
-    height: 44px;
-    font-size: 1.5em;
-    background-color: #222;
-    background: url("images/header_background.jpg") top left;
-    padding: .5em 0px .15em 0px;
-    width: 100%;
-    color: #FF7F00;
-    font-weight: bold;
-    border-bottom: 1px solid #000;
-    text-align: center;
-    font-size: 1em;
-    text-shadow: 0.1em 0.1em 0.05em #000;
-}
-
-header #border {
-    background: url("images/blood_border.png") top left repeat-x;
-    height: 19px;
-    width:100%;
-    margin:0px;
-    padding:0px;
-    margin-top:-1px;
-}
-
-footer {
-    margin-top: 1em;
-    border-top; 1px solid #888;
-    font-family: arial;
-    font-size: 0.5em;
-    text-align: center;
-    padding-bottom:6em;
-}
-
-
-h1, h2, h3, h4, h5, h6 {
-    color: #FF7F00;
-    margin-bottom: 0px;
-    /*text-shadow: 0.1em 0.1em 0.05em #000;*/
+    -webkit-transform: translate3d(0,0,0);*/
 }
 
 a {
@@ -95,13 +49,12 @@ a:hover {
 .stop {
     display: none;
     position: absolute;
-    top:10px;
-    right:10px;
-    bottom:10px;
+    top:0px;
+    right:0px;
+    bottom:0px;
     width:1.5em;
     min-width:50px;
-    border: 1px solid black;
-    background: #FF7F00 url("images/stop.jpg") no-repeat center;
+    border: none;
 }
 
 .active .stop {
@@ -111,56 +64,121 @@ a:hover {
 .multicolumn {
 }
 
+@media (min-width: 600px) {
+    .multicolumnList
+    {
+        -moz-column-count:2; /* Firefox */
+        -webkit-column-count:2; /* Safari and Chrome */
+        column-count:2;
+
+        -moz-column-gap:20px; /* Firefox */
+        -webkit-column-gap:20px; /* Safari and Chrome */
+        column-gap:20px;
+    }
+}
+
+
+
+.headingSection {
+    background: #000;
+    color: #825000;
+    padding:0px;
+    margin: 0px;
+    clear:both;
+}
 
 #ambientSounds,
 #soundEffects{
     padding:0;
     margin:0;
-    margin-left:-17px;
+    margin-left:0px;
     border:none;
     list-style-type: none;
-
-
-
 }
+
+#ambientSounds div polygon, #soundEffects div polygon {
+
+    vertical-align: middle;
+    fill:#FF7F00;
+}
+
+#ambientSounds div.active polygon, #soundEffects div.active polygon {
+
+    fill:#000;
+}
+
+#stopIcon {
+    fill:#000;
+}
+
+
+#ambientSounds div #stopIcon, #soundEffects div #stopIcon {
+
+    display: none;
+    visibility: hidden;
+}
+
+#ambientSounds div.active #stopIcon, #soundEffects div.active #stopIcon {
+
+    display: inline;
+    visibility: visible;
+}
+
+
+#ambientSounds div #playIcon, #soundEffects div #playIcon {
+
+    display: inline;
+    visibility: visible;
+}
+
+#ambientSounds div.active #playIcon, #soundEffects div.active #playIcon {
+
+    display: none;
+    visibility: hidden;
+}
+
 
 #ambientSounds div,
 #soundEffects div,
 li {
-    padding:.6em 0px .4em 0px;
+    padding:0px;
+    padding-top:10px;
     position: relative;
     font-size: 1em;
-    border:1px solid #666;
-	text-indent:51px;
-
+    height:40px;
+/*
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
 
     transform: translate3d(0,0,0);
-    -webkit-transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);*/
+    font-size: 1.5em;
 }
 
 div.effectLi  {
-    background-image: url("images/play.png");
+    /*background-image: url("images/play.png");
     background-position: 10px center;
-    background-repeat: no-repeat;
-    background-color: #eee;
+    background-repeat: no-repeat;   */
+    background-color: #111;
+    color:#FF7F00;
 }
 
 div.ambientLi {
-    background-image: url("images/play.png");
+    /*background-image: url("images/play.png");
     background-position: 10px center;
-    background-repeat: no-repeat;
-    background-color: #eee;
+    background-repeat: no-repeat;   */
+    background-color: #111;
+    color:#FF7F00;
 }
 
 .ambientLi.active {
-    background-image: url("images/stop.jpg");
+    /*background-image: url("images/stop.jpg");*/
 }
 
 div.effectLi.active,
 div.ambientLi.active {
     background-color: #FF7F00;
+    color:#000;
 }
 
 #loading {
@@ -183,15 +201,13 @@ and (max-device-width : 1024px) {
 }*/
 
 .row {
-	display:table;
+	display:block;
 	width:100%;
-	content:"";
-	clear:both;
 }
 
 .cell {
 	float:left;
-	margin-left:20px;
+	margin-left:0px;
 }
 
 
@@ -218,10 +234,10 @@ and (max-device-width : 1024px) {
 }
 
 #about {
-    margin-top:44px;
     font-family: arial;
     color: white;
     font-size: 0.5em;
+    padding:20px;
 }
 
 #about a{
@@ -239,4 +255,43 @@ and (max-device-width : 1024px) {
 
 .normalList li {
 	text-indent:0px;
+    margin:0px;
+    padding:0px;
+}
+
+
+.tabbar {
+    border: 1px solid orange;
+    height: 30px;
+    list-style-type:none;
+    margin:10px;
+    padding:0;
+
+    border-radius: 10px;
+}
+
+.tabbar li {
+    border-right: 1px solid orange;
+    height: 30px;
+    float: left;
+    margin-left: 0px;
+    line-height: 28px;
+    padding: 0px;
+    width: 33%;
+    text-align: center;
+}
+.tabbar li:last-child
+{
+    border-right: none;
+}
+
+.tabbar li.selected {
+    background: orange;
+    color:black;
+}
+
+.right {
+    position: absolute;
+    right:8px;
+    top:8px;
 }

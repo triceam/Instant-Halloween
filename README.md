@@ -1,34 +1,19 @@
 Instant-Halloween
 =================
 
-Instant Halloween is a free and open source Halloween-themed sound effects application built using PhoneGap.  This app was developed using PhoneGap version 2.1.0.
+Instant Halloween is a free and open source Halloween-themed sound effects application built using PhoneGap.  This app was developed using PhoneGap version 3.0.0.  Please follow the PhoneGap 3.0 command line steps to reproduce this project.
 
 ## Setup Instructions:
 
-### iOS
-
-1. Create a new PhoneGap project following the instructions in the [iOS Getting Started Guide](http://docs.phonegap.com/en/2.1.0/guide_getting-started_ios_index.md.html#Getting%20Started%20with%20iOS)
-2. Copy the contents of the "www" directory from this repository into the "www" directory in the new project (do not overwrite the cordova-2.1.0.js).
-3. Copy the files in the "native plugin/iOS" directory into your iOS project and make sure that they have been added within Xcode (not just copied into the directory).  You can read more about PhoneGap Native Plugins in the [PhoneGap Docs](http://docs.phonegap.com/en/2.1.0/guide_plugin-development_index.md.html#Plugin%20Development%20Guide).  The plugin used here is the [LowLatencyAudio Plugin for iOS](https://github.com/phonegap/phonegap-plugins/tree/master/iOS/LowLatencyAudio)
-4. Add a mapping in Cordova.plist under "Plugins".  Map the key "LowLatencyAudio" to the value "LowLatencyAudio"
-
-### Android
-
-1. Create a new PhoneGap project following the instructions in the [Android Getting Started Guide](http://docs.phonegap.com/en/2.1.0/guide_getting-started_android_index.md.html#Getting%20Started%20with%20Android)
-2. Copy the contents of the "www" directory from this repository into the "www" directory in the new project (do not overwrite the cordova-2.1.0.js).
-3. Copy the files in the "native plugin/Android" directory into your Android project (into the "src" folder).  You can read more about PhoneGap Native Plugins in the [PhoneGap Docs](http://docs.phonegap.com/en/2.1.0/guide_plugin-development_index.md.html#Plugin%20Development%20Guide).  The plugin used here is the [LowLatencyAudio Plugin for Android](https://github.com/phonegap/phonegap-plugins/tree/master/Android/LowLatencyAudio)
-4. Add a mapping in Cordova.plist under "Plugins".  Map the key "LowLatencyAudio" to the value "LowLatencyAudio"
-
-## Code
-
-This application is rendered dynamically using JavaScript.  See www/index.html to see general structure and HTML template.  See www/js/index.js for general application logic and interactivity.
-
-###Libraries
-The following libraries were used within this application:
-
-* [Zepto](http://zeptojs.com/)
-* [iScroll](http://cubiq.org/iscroll)
-* [MustacheJS](https://github.com/janl/mustache.js)
+1. Create a new phonegap project using the CLI command:  phonegap create InstantHalloween com.yourdomain.InstantHalloween InstantHalloween
+2. Copy the contents of the www folder from this project into the newly created "www" folder
+3. Add the following plugins from the CLI interface
+3.1. phonegap local plugin add https://github.com/triceam/LowLatencyAudio
+3.2. phonegap local plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
+3.3. phonegap local plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-dialogs.git
+3.4. honegap local plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-splashscreen.git
+3.5. phonegap local plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git
+3.6. phonegap local plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-console.git
 
 ## Attribution
 
