@@ -1,7 +1,7 @@
 Instant-Halloween
 =================
 
-Instant Halloween is a free and open source Halloween-themed sound effects application built using PhoneGap.  This app was developed using PhoneGap version 3.0.0.  Please follow the PhoneGap 3.0 command line steps to reproduce this project.
+Instant Halloween is a free and open source Halloween-themed sound effects application built using PhoneGap.  This app was developed using PhoneGap version 3.0.0.  Please follow the PhoneGap 3.0 command line steps to reproduce this project.  This project uses native plugins supported by both Android and iOS - It CANNOT be used with PhoneGap build at the time of release.
 
 ## Setup Instructions:
 
