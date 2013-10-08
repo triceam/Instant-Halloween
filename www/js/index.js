@@ -92,9 +92,33 @@ function onDeviceReady()
         window.LowLatencyAudio.preloadAudio( sound.id, sound.path, 1 );
     }
     
+    window.addEventListener("statusTap", function() {
+	  	scrollToTop();
+	});
+    
     
     //allow time for sounds to load - yeah, i know, i should add callbacks
     setTimeout( renderMain, 500 );
+}
+
+function scrollToTop() {
+	var target = $(".viewNavigator_contentHolder");
+	
+	//disable touch scroll
+	target.css({
+		'-webkit-overflow-scrolling' : 'none',
+		'overflow-y' : 'hidden'
+	});
+	
+	//animate
+	$(".viewNavigator_contentHolder").animate({ scrollTop: 0}, 300, "swing", function(){
+		
+		//re-enable touch scrolling
+		target.css({
+			'-webkit-overflow-scrolling' : 'touch',
+			'overflow-y' : 'scroll'
+		});
+	});
 }
 
 function resetScroller() {

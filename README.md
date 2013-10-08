@@ -9,6 +9,7 @@ Instant Halloween is a free and open source Halloween-themed sound effects appli
 2. Copy the contents of the www folder from this project into the newly created "www" folder
 3. Add the following plugins from the CLI interface
 	1. phonegap local plugin add https://github.com/triceam/LowLatencyAudio
+	2. phonegap local plugin add https://github.com/triceam/cordova-statusTap
 	2. phonegap local plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-device.git
 	3. phonegap local plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-dialogs.git
 	4. honegap local plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-splashscreen.git
