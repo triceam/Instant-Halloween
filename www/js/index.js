@@ -154,8 +154,18 @@ function setupTapHandlers( target, handler ) {
     }
 }
 
+function getNonSVGElement(target) {
+    var _target = target.get()[0];
+    while(_target.nodeName == "polygon" || _target.nodeName == "g" || _target.nodeName == "svg") {
+        target = target.parent();
+        var _target = target.get()[0];
+    }
+    
+    return target;
+}
+
 function touchStart( event ) {
-	var element = $(event.target);
+	var element = getNonSVGElement($(event.target));
     var id = element.attr("id");
 	touchMap[ id ].startTime = new Date().getTime();
 
@@ -170,7 +180,7 @@ function touchStart( event ) {
 }
 
 function touchMove( event ) {
-	var element = $(event.target);
+	var element = getNonSVGElement($(event.target));
     var id = element.attr("id");
     var touchInfo = touchMap[ id ];
 	
@@ -180,7 +190,7 @@ function touchMove( event ) {
 }
 
 function touchEnd( event ) {
-	var element = $(event.target);
+	var element = getNonSVGElement($(event.target));
     var id = element.attr("id");
     //alert(id);
 
@@ -301,8 +311,7 @@ function handleLink(event){
 }
 
 function ambientAssetTap(event) {
-	
-    var element = $(event.target)
+	var element = getNonSVGElement($(event.target));
     var id = element.attr("id");
     var asset = effectsMap[ id ];
 
@@ -313,11 +322,10 @@ function ambientAssetTap(event) {
     }
     else {
 
-        
     	if (!canPlayAmbientAsset()){ 
     		navigator.notification.alert("Cannot play more than " + MAX_ANDROID_CONCURRENT_SOUNDS + " ambient sounds at the same time.  Please stop an ambient sound to play another one.", null, "Warning", "OK")
     		return false; 
-    	} 
+    	}
     	
         element.addClass("active");
         asset.playing = true;
@@ -346,7 +354,7 @@ function canPlayAmbientAsset() {
 
 function soundFxAssetTap(event) {
 	
-    var element = $(event.target)
+	var element = getNonSVGElement($(event.target));
     var id = element.attr("id");
     var asset = effectsMap[ id ];
 
@@ -372,7 +380,7 @@ function updateAssetHighlight( id ) {
 
 function soundFxAssetStop(event) {
 	
-    var element = $(event.target)
+	var element = getNonSVGElement($(event.target));
     var id = element.attr("id").substr(5);
     var asset = effectsMap[ id ];
 
