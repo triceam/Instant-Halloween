@@ -239,7 +239,6 @@ function renderMain() {
     });
 
     setupTapHandlers( actionButton, renderAbout );
-    setupTapHandlers( $("ul"), renderAbout );
 
     //resetScroller();
     updateCSS();
