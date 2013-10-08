@@ -465,9 +465,8 @@ function onAppPause() {
 }
 
 function onBackButton( event ) {
-	if ( view == "about") {
-		renderMain();
-	}
+	document.removeEventListener("backbutton", onBackButton);
+	window.viewNavigator.popView();
 }
 
 $(window).resize( updateCSS );
