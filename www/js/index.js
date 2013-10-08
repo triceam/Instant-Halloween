@@ -111,7 +111,7 @@ function scrollToTop() {
 	});
 	
 	//animate
-	$(".viewNavigator_contentHolder").animate({ scrollTop: 0}, 300, "swing", function(){
+	target.animate({ scrollTop: 0}, 300, "swing", function(){
 		
 		//re-enable touch scrolling
 		target.css({
